@@ -144,8 +144,8 @@ func main() {
 		"I",
 		"output date/time in ISO 8601 format. FMT='date' for date only (the default), 'hours', 'minutes', 'seconds', or 'ns' for date and time to the indicated precision. Example: 2006-08-14T02:34:56-0600",
 	)
-	rfc3339 := flag.String("rfc-3339", "", "")
-	rfc2822 := flag.Bool("rfc-2822", false, "")
+	rfc3339 := flag.String("rfc-3339", "", `output date/time in RFC 3339 format. FMT='date', 'seconds', or 'ns' for date and time to the indicated precision. Example: 2006-08-14 02:34:56-06:00`)
+	rfc2822 := flag.Bool("rfc-2822", false, "output date and time in RFC 2822 format. Example: Mon, 14 Aug 2006 02:34:56 -0600")
 	flag.Parse()
 
 	if iso8601.set {
